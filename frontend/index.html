@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحميل فيديوهات TikTok - بدون علامة مائية</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="gradient-bg">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <div class="logo-icon">🎵</div>
+                <h1 class="logo-text">TikTok Downloader</h1>
+            </div>
+            <p class="subtitle">تحميل فيديوهات TikTok بدون علامة مائية</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Download Section -->
+        <div class="download-section">
+            <div class="download-card">
+                <div class="card-header">
+                    <div class="icon-float">
+                        <div class="download-icon">⬇️</div>
+                    </div>
+                    <h2 class="card-title">حمّل فيديوهاتك المفضلة</h2>
+                    <p class="card-subtitle">الصق رابط الفيديو من TikTok هنا</p>
+                </div>
+
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <input 
+                            type="text" 
+                            id="videoUrl" 
+                            placeholder="https://www.tiktok.com/@username/video/..." 
+                            class="url-input"
+                        >
+                        <div class="input-icon">🔗</div>
+                    </div>
+
+                    <button onclick="downloadVideo()" class="download-btn">
+                        تحميل الفيديو ⚡
+                    </button>
+                </div>
+
+                <!-- Results Area -->
+                <div id="results" class="results-container hidden">
+                    <div class="success-box">
+                        <div class="success-header">
+                            <div class="success-icon">✅</div>
+                            <h3 class="success-title">جاهز للتحميل!</h3>
+                        </div>
+                        
+                        <div id="videoPreview" class="video-preview"></div>
+                        
+                        <div class="download-options">
+                            <button onclick="downloadFile('video')" class="option-btn video-btn">
+                                تحميل بجودة عالية (HD) 📹
+                            </button>
+                            <button onclick="downloadFile('audio')" class="option-btn audio-btn">
+                                تحميل الصوت فقط (MP3) 🎵
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loading -->
+                <div id="loading" class="loading-container hidden">
+                    <div class="spinner"></div>
+                    <p class="loading-text">جاري معالجة الفيديو...</p>
+                </div>
+
+                <!-- Error -->
+                <div id="error" class="error-container hidden">
+                    <div class="error-icon">❌</div>
+                    <p class="error-text"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="features-section">
+            <h3 class="section-title">✨ المميزات</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h4 class="feature-title">سريع وسهل</h4>
+                    <p class="feature-text">حمّل فيديوهاتك بسرعة فائقة في ثوانٍ معدودة</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h4 class="feature-title">بدون علامة مائية</h4>
+                    <p class="feature-text">احصل على فيديوهات نظيفة بدون أي علامات</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💯</div>
+                    <h4 class="feature-title">مجاني تماماً</h4>
+                    <p class="feature-text">استخدم الخدمة بشكل مجاني بدون أي قيود</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- How to Use -->
+        <div class="how-to-section">
+            <div class="how-to-card">
+                <h3 class="section-title">📝 كيفية الاستخدام</h3>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4 class="step-title">افتح تطبيق TikTok</h4>
+                            <p class="step-text">اختر الفيديو الذي تريد تحميله</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4 class="step-title">انسخ الرابط</h4>
+                            <p class="step-text">اضغط على "مشاركة" ثم "نسخ الرابط"</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4 class="step-title">الصق الرابط</h4>
+                            <p class="step-text">ضع الرابط في المربع أعلاه واضغط على "تحميل"</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4 class="step-title">حمّل الفيديو</h4>
+                            <p class="step-text">اختر الجودة المطلوبة وابدأ التحميل</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2025 TikTok Downloader - جميع الحقوق محفوظة</p>
+            <p class="footer-subtext">هذه الأداة للاستخدام الشخصي فقط. يرجى احترام حقوق المبدعين.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
