@@ -176,8 +176,8 @@ async function extractWithLibrary(url) {
 // Method 2: Using Puppeteer (Fallback)
 // ============================================
 async function extractWithPuppeteer(url) {
-  //  let browser = null;
-    throw new Error('Puppeteer disabled'); // أضف هذا
+    let browser = null;
+    
     try {
         console.log('  Launching browser...');
         browser = await puppeteer.launch({
@@ -381,3 +381,4 @@ app.listen(PORT, () => {
     console.log('═══════════════════════════════════════');
 
 });
+
