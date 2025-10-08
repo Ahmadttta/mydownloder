@@ -1,0 +1,13 @@
+[phases.setup]
+nixPkgs = ['nodejs-18_x']
+aptPkgs = ['chromium']
+
+[phases.install]
+cmds = ['npm ci --production --ignore-scripts']
+
+[start]
+cmd = 'node server.js'
+
+[variables]
+PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = 'true'
+PUPPETEER_EXECUTABLE_PATH = '/usr/bin/chromium'
